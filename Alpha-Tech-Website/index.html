@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Alpha Tech - Digital Skills Academy</title>
+  
+  <meta content="Empowering individuals with essential digital skills through expert-led courses in web development, e-commerce, and more." name="description">
+  <meta content="digital skills, web development, e-commerce, coding, online courses, tech education" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Particle.js for background animation -->
+  <style>
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .floating { 
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    @keyframes floating {
+      0% { transform: translate(0,  0px); }
+      50%  { transform: translate(0, 15px); }
+      100%   { transform: translate(0, -0px); }   
+    }
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #00dbde, #fc00ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .course-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: linear-gradient(45deg, #ff8a00, #e52e71);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html" class="gradient-text">Alpha Tech</a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+      <a href="courses.html" class="get-started-btn">Get Started</a>
+
+    </div>
+  </header>
+
+  <!-- ======= Hero Section with Particle Background ======= -->
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div id="particles-js"></div>
+    <div class="container position-relative hero-content" data-aos="fade-up" data-aos-delay="100">
+      <h1 class="mb-4">Acquiring Knowledge Today,<br> <span class="gradient-text">Shaping Tomorrow's Leadership</span></h1>
+      <p class="mb-4">Join our community of learners and transform your career with cutting-edge digital skills</p>
+      <div class="d-flex gap-3 justify-content-center">
+        <a href="courses.html" class="btn-get-started">Explore Courses</a>
+        <!-- <a href="#about" class="btn-watch-video"><i class="bi bi-play-circle"></i> <span>Watch Video</span></a> -->
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/about.jpg" class="img-fluid rounded-4 floating" alt="Alpha Tech students learning">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3 class="mb-4">Welcome to <span class="gradient-text">ALPHA TECH</span></h3>
+            <p class="lead">Where we empower individuals with the essential digital skills of today and tomorrow.</p>
+            <p>Our mission is to bridge the gap between technology and ambition, offering a diverse range of expert-led courses and resources. Whether you're a beginner exploring the digital landscape or a professional aiming to upskill, our platform is your gateway to unlocking limitless opportunities in the digital world.</p>
+            
+            <div class="mt-4">
+              <div class="row">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="icon-box-icon bg-primary text-white rounded-circle me-3 p-2">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div>
+                      <h5 class="mb-0">10,000+ Students</h5>
+                      <small>Worldwide community</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="icon-box-icon bg-success text-white rounded-circle me-3 p-2">
+                      <i class="bi bi-laptop"></i>
+                    </div>
+                    <div>
+                      <h5 class="mb-0">50+ Courses</h5>
+                      <small>Cutting-edge curriculum</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Why Choose Us</h2>
+          <p>Our Key Differentiators</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-box shadow p-4 rounded-4 h-100">
+              <i class="bi bi-person-video3 feature-icon mb-4"></i>
+              <h4>Expert Instructors</h4>
+              <p>Learn from industry veterans who bring real-world experience to every lesson, ensuring practical and relevant insights.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-box shadow p-4 rounded-4 h-100">
+              <i class="bi bi-layout-text-window-reverse feature-icon mb-4"></i>
+              <h4>Hands-on Projects</h4>
+              <p>Apply what you learn through real-world projects that build your portfolio and give you practical experience.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-box shadow p-4 rounded-4 h-100">
+              <i class="bi bi-phone feature-icon mb-4"></i>
+              <h4>Mobile Learning</h4>
+              <p>Access courses anytime, anywhere with our mobile-friendly platform and downloadable resources.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-box shadow p-4 rounded-4 h-100">
+              <i class="bi bi-award feature-icon mb-4"></i>
+              <h4>Certification</h4>
+              <p>Earn recognized certificates to validate your skills and boost your career prospects.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-box shadow p-4 rounded-4 h-100">
+              <i class="bi bi-people feature-icon mb-4"></i>
+              <h4>Community Support</h4>
+              <p>Join our vibrant community of learners and get support from peers and mentors.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-box shadow p-4 rounded-4 h-100">
+              <i class="bi bi-briefcase feature-icon mb-4"></i>
+              <h4>Career Services</h4>
+              <p>Get career guidance, resume reviews, and job placement assistance upon course completion.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Popular Courses Section ======= -->
+    <section id="popular-courses" class="courses">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Courses</h2>
+          <p>Popular Courses</p>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="course-item hover-scale">
+              <img src="assets/img/Web basic tab1.png" class="img-fluid" alt="Web Development Course">
+              <div class="course-badge">Coming Soon</div>
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>INTERMEDIATE</h4>
+                  <p class="price">$80</p>
+                </div>
+                <h3>Web Development</h3>
+                <p>Master full-stack development with modern frameworks like React and Node.js. Build responsive, interactive web applications from scratch.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid rounded-circle" alt="Instructor">
+                    <span>Alex Johnson</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="course-item hover-scale">
+              <img src="assets/img/shopify2 .jpg" class="img-fluid" alt="Dropshipping Course">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>E-COMMERCE</h4>
+                  <p class="price">$180</p>
+                </div>
+                <h3><a href="Dropshipping.html">Dropshipping Mastery</a></h3>
+                <p>Build a profitable online store without inventory. Learn product research, Shopify setup, and marketing strategies to scale your business.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid rounded-circle" alt="Instructor">
+                    <span>Sarah Williams</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="course-item hover-scale">
+              <img src="assets/img/course-1.jpg" class="img-fluid" alt="Web Development Basics">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>BEGINNER</h4>
+                  <p class="price">$40</p>
+                </div>
+                <h3><a href="web-basic.html">Web Development Basics</a></h3>
+                <p>Start your coding journey with HTML, CSS, and JavaScript. Create your first website and understand core web development concepts.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid rounded-circle" alt="Instructor">
+                    <span>Michael Chen</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+          <a href="courses.html" class="btn btn-primary btn-lg">View All Courses</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>What Our Students Say</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/img/testimonials/testimonial-1.jpg" class="testimonial-img" alt="Student testimonial">
+                  </div>
+                  <div class="col-lg-8 pt-4 pt-lg-0 content">
+                    <h3>Jessica Parker</h3>
+                    <h4>Web Developer</h4>
+                    <div class="stars mb-3">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      Alpha Tech transformed my career. The web development course gave me the skills to land my dream job at a tech startup. The instructors are knowledgeable and the community is incredibly supportive.
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/img/testimonials/testimonial-2.jpg" class="testimonial-img" alt="Student testimonial">
+                  </div>
+                  <div class="col-lg-8 pt-4 pt-lg-0 content">
+                    <h3>David Kim</h3>
+                    <h4>E-commerce Entrepreneur</h4>
+                    <div class="stars mb-3">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      The dropshipping course exceeded my expectations. Within 3 months of completing the program, I launched a store that now generates $10k/month in revenue. The practical strategies really work!
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= CTA Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Ready to Transform Your Career?</h3>
+            <p> Join thousands of students who have accelerated their careers with Alpha Tech's industry-relevant courses.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="courses.html">Enroll Now</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Alpha Tech</h3>
+            <p>
+              <strong>Phone:</strong> +234 7042057479<br>
+              <strong>Email:</strong> ebukaofonegbu@gmail.com<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../Main portfolio/index.html">Back to Portfolio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">Courses</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Blog.html">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Popular Courses</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="web-basic.html">Web Development Basics</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Dropshipping.html">Dropshipping Mastery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Advanced JavaScript</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Digital Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Data Science Fundamentals</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Get the latest course updates, tech news, and exclusive offers directly to your inbox</p>
+            <form action="" method="post">
+              <input type="email" name="email" placeholder="Your Email Address"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Alpha Tech</span></strong>. All Rights Reserved
+        </div>
+      </div>
+      <div class="credits text-center text-md-end">
+        Designed by <a href="#">Damien.Co</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Particle.js Initialization -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      });
+    });
+  </script>
+
+</body>
+
+</html>

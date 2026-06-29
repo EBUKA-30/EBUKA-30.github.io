@@ -1,0 +1,80 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #0c0c0c;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.contact_section {
+  position: relative;
+}
+
+.contact_section form {
+  margin-top: 25px;
+}
+
+.contact_section input {
+  width: 100%;
+  border: none;
+  height: 50px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  background-color: transparent;
+  outline: none;
+  color: #000000;
+  border: 1px solid #a5a5a5;
+}
+
+.contact_section input::-webkit-input-placeholder {
+  color: #6c6c6c;
+}
+
+.contact_section input:-ms-input-placeholder {
+  color: #6c6c6c;
+}
+
+contact_section input::-ms-input-placeholder {
+  color: #6c6c6c;
+}
+
+.contact_section input::placeholder {
+  color: #6c6c6c;
+}
+
+.contact_section input.message-box {
+  height: 120px;
+}
+
+.contact_section button {
+  border: none;
+  display: inline-block;
+  padding: 12px 35px;
+  background-color: #46200b;
+  color: #ffffff;
+  border-radius: 0;
+  border: 1px solid #46200b;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 15px;
+}
+
+.contact_section button:hover {
+  background-color: transparent;
+  color: #46200b;
+}
+
+.contact_section .map_container {
+  height: 345px;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.contact_section .map_container .map {
+  height: 100%;
+}
+
+.contact_section .map_container .map #googleMap {
+  height: 100%;
+}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Courses | Alpha Tech - Digital Skills Academy</title>
+  <meta content="Explore our comprehensive digital skills courses in web development, e-commerce, design and more. Start your tech journey today." name="description">
+  <meta content="web development courses, e-commerce training, digital skills, coding classes, tech education" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    .course-card {
+      transition: all 0.3s ease;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+    .course-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .course-img {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .course-card:hover .course-img {
+      transform: scale(1.05);
+    }
+    .course-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: linear-gradient(45deg, #ff8a00, #e52e71);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .price-tag {
+      background: linear-gradient(45deg, #4e54c8, #8f94fb);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+    .breadcrumbs {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 60px 0;
+    }
+    .category-filter {
+      margin-bottom: 40px;
+    }
+    .category-btn {
+      border: 2px solid #4e54c8;
+      color: #4e54c8;
+      margin: 5px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+    .category-btn:hover, .category-btn.active {
+      background: #4e54c8;
+      color: white;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #00dbde, #fc00ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html" class="gradient-text">Alpha Tech</a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="courses.html">Courses</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+      <a href="courses.html" class="get-started-btn">Get Started</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" data-aos="fade-in">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <h1>Our Courses</h1>
+        <p class="mt-3">Master in-demand digital skills with our expert-led programs</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Courses Section ======= -->
+    <section id="courses" class="courses">
+      <div class="container" data-aos="fade-up">
+
+        <!-- Course Categories Filter -->
+        <div class="category-filter text-center" data-aos="fade-up" data-aos-delay="100">
+          <button class="btn category-btn active" data-filter="all">All Courses</button>
+          <button class="btn category-btn" data-filter="web">Web Development</button>
+          <button class="btn category-btn" data-filter="ecommerce">E-Commerce</button>
+          <button class="btn category-btn" data-filter="design">Design</button>
+          <button class="btn category-btn" data-filter="marketing">Marketing</button>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+          <!-- Course 1 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-filter="web">
+            <div class="course-card">
+              <div class="position-relative">
+                <img src="assets/img/course-1.jpg" class="img-fluid course-img" alt="Web Development Course">
+                <div class="course-badge">BASIC</div>
+              </div>
+              <div class="course-content p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-primary">Beginner</span>
+                  <span class="price-tag">$40</span>
+                </div>
+                <h3><a href="web-basic.html">Web Development Fundamentals</a></h3>
+                <p>From captivating front-end interfaces to exceptional online experiences, we'll guide you through the essential layers of creating them.</p>
+                <div class="trainer d-flex justify-content-between align-items-center mt-4">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid rounded-circle me-2" width="40" alt="Instructor">
+                    <span>Ebuka Ofonegbu</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Course Item -->
+
+          <!-- Course 2 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-filter="web">
+            <div class="course-card">
+              <div class="position-relative">
+                <img src="assets/img/web basic tab 2.webp" class="img-fluid course-img" alt="Web Development Intermediate">
+                <div class="course-badge">INTERMEDIATE</div>
+                <div class="course-badge" style="left: 15px; right: auto; background: #4CAF50;">Coming Soon</div>
+              </div>
+              <div class="course-content p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-warning">Intermediate</span>
+                  <span class="price-tag">$80</span>
+                </div>
+                <h3>Advanced Web Development</h3>
+                <p>Dive deeper into full-stack development with modern frameworks and advanced techniques for building robust web applications.</p>
+                <div class="trainer d-flex justify-content-between align-items-center mt-4">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid rounded-circle me-2" width="40" alt="Instructor">
+                    <span>Sarah Johnson</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Course Item -->
+
+          <!-- Course 3 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-filter="ecommerce">
+            <div class="course-card">
+              <div class="position-relative">
+                <img src="assets/img/shopify.jpg" class="img-fluid course-img" alt="Dropshipping Course">
+                <div class="course-badge">HOT</div>
+              </div>
+              <div class="course-content p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-success">E-Commerce</span>
+                  <span class="price-tag">$180</span>
+                </div>
+                <h3><a href="Dropshipping.html">Dropshipping Mastery</a></h3>
+                <p>Learn how to build, manage, and scale online stores seamlessly. Discover winning product approaches and create effective listings.</p>
+                <div class="trainer d-flex justify-content-between align-items-center mt-4">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid rounded-circle me-2" width="40" alt="Instructor">
+                    <span>Michael Chen</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Course Item -->
+
+          <!-- Course 4 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-filter="design">
+            <div class="course-card">
+              <div class="position-relative">
+                <img src="assets/img/course-2.jpg" class="img-fluid course-img" alt="Graphic Design Course">
+                <div class="course-badge">NEW</div>
+              </div>
+              <div class="course-content p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-info">Design</span>
+                  <span class="price-tag">$250</span>
+                </div>
+                <h3>Graphic Design Pro</h3>
+                <p>Explore the art of visual storytelling, master design tools, and craft captivating visuals that leave a lasting impression.</p>
+                <div class="trainer d-flex justify-content-between align-items-center mt-4">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="assets/img/trainers/trainer-4.jpg" class="img-fluid rounded-circle me-2" width="40" alt="Instructor">
+                    <span>Emma Wilson</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Course Item -->
+
+          <!-- Course 5 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-filter="marketing">
+            <div class="course-card">
+              <div class="position-relative">
+                <img src="assets/img/course-3.jpg" class="img-fluid course-img" alt="Copywriting Course">
+                <div class="course-badge">POPULAR</div>
+              </div>
+              <div class="course-content p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-danger">Marketing</span>
+                  <span class="price-tag">$180</span>
+                </div>
+                <h3>Advanced Copywriting</h3>
+                <p>From honing your storytelling finesse to mastering persuasive language, we'll equip you with skills to captivate audiences.</p>
+                <div class="trainer d-flex justify-content-between align-items-center mt-4">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="assets/img/trainers/trainer-5.jpg" class="img-fluid rounded-circle me-2" width="40" alt="Instructor">
+                    <span>David Kim</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Course Item -->
+
+          <!-- Course 6 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-filter="web">
+            <div class="course-card">
+              <div class="position-relative">
+                <img src="assets/img/course-1.jpg" class="img-fluid course-img" alt="JavaScript Course">
+                <div class="course-badge">ADVANCED</div>
+              </div>
+              <div class="course-content p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-dark">Advanced</span>
+                  <span class="price-tag">$169</span>
+                </div>
+                <h3>JavaScript Mastery</h3>
+                <p>Master modern JavaScript frameworks and build interactive, dynamic web applications with professional techniques.</p>
+                <div class="trainer d-flex justify-content-between align-items-center mt-4">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="assets/img/trainers/trainer-6.jpg" class="img-fluid rounded-circle me-2" width="40" alt="Instructor">
+                    <span>Alex Rodriguez</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Course Item -->
+
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+          <button class="btn btn-primary btn-lg">Load More Courses</button>
+        </div>
+
+      </div>
+    </section><!-- End Courses Section -->
+
+    <!-- ======= CTA Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Ready to Start Learning?</h3>
+            <p> Join thousands of students who have transformed their careers with Alpha Tech's industry-relevant courses.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="contact.html">Enroll Now</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End CTA Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Alpha Tech</h3>
+            <p>
+              <strong>Phone:</strong> +234 7042057479<br>
+              <strong>Email:</strong> ebukaofonegbu@gmail.com<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">Courses</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Blog.html">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Popular Courses</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="web-basic.html">Web Development Basics</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Dropshipping.html">Dropshipping Mastery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Advanced JavaScript</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Digital Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Data Science Fundamentals</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Get the latest course updates, tech news, and exclusive offers directly to your inbox</p>
+            <form action="" method="post">
+              <input type="email" name="email" placeholder="Your Email Address"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Alpha Tech</span></strong>. All Rights Reserved
+        </div>
+      </div>
+      <div class="credits text-center text-md-end">
+        Designed by <a href="#">Damien.Co</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Course Filter JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.category-btn');
+      const courseItems = document.querySelectorAll('[data-filter]');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          const filterValue = this.getAttribute('data-filter');
+          
+          courseItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-filter') === filterValue) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

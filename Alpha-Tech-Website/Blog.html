@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Blog - Alpha Tech</title>
+  <meta content="Discover the latest in web development, design trends, and tech insights" name="description">
+  <meta content="web development, design, technology, tutorials, blog" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/fav icon.jpg" rel="icon">
+  <link href="assets/img/fav icon.jpg" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <style>
+    :root {
+      --primary-color: #5233ff;
+      --secondary-color: #ff6b35;
+      --accent-color: #00d4aa;
+      --dark-color: #1a1a2e;
+      --light-color: #f8f9ff;
+      --text-dark: #2c2c54;
+      --text-light: #6c757d;
+      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-secondary: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+      --gradient-accent: linear-gradient(135deg, #00d4aa 0%, #00a8cc 100%);
+    }
+
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 25% 25%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(0, 212, 170, 0.1) 0%, transparent 50%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .blog-hero {
+      background: var(--gradient-primary);
+      padding: 120px 0 80px;
+      margin-top: 70px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0)"/></radialGradient></defs><circle cx="10" cy="10" r="2" fill="url(%23a)"/><circle cx="30" cy="5" r="1" fill="url(%23a)"/><circle cx="60" cy="15" r="1.5" fill="url(%23a)"/><circle cx="80" cy="8" r="1" fill="url(%23a)"/><circle cx="95" cy="12" r="2" fill="url(%23a)"/></svg>') repeat;
+      opacity: 0.3;
+      animation: float 20s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(180deg); }
+    }
+
+    .blog-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .blog-hero p {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
+    }
+
+    .blog-container {
+      margin-top: -50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-card-img {
+      height: 250px;
+      background: var(--gradient-secondary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-card-img::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .blog-card:hover .blog-card-img::before {
+      transform: translateX(100%);
+    }
+
+    .blog-card-img i {
+      font-size: 4rem;
+      color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .blog-card-body {
+      padding: 2rem;
+    }
+
+    .blog-category {
+      display: inline-block;
+      background: var(--gradient-accent);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .blog-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .blog-title:hover {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    .blog-meta i {
+      margin-right: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .blog-excerpt {
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.8rem 1.5rem;
+      background: var(--gradient-primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .read-more-btn:hover {
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    .read-more-btn i {
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .read-more-btn:hover i {
+      transform: translateX(3px);
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--gradient-secondary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      z-index: 1;
+    }
+
+    .sidebar-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .sidebar-card h5 {
+      font-family: 'Playfair Display', serif;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .recent-post {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .recent-post:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .recent-post-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--gradient-accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    .recent-post-content h6 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .recent-post-content small {
+      color: var(--text-light);
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(102, 126, 234, 0.1);
+      color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      font-size: 0.85rem;
+      margin: 0.25rem;
+      transition: all 0.3s ease;
+    }
+
+    .tag:hover {
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+    }
+
+    .breadcrumbs {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .blog-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .blog-hero p {
+        font-size: 1.1rem;
+      }
+      
+      .blog-card-body {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="index.html">Alpha Tech</a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a class="active" href="Blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+      <a href="courses.html" class="get-started-btn">Get Started</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="blog-hero">
+      <div class="container text-center" data-aos="fade-up">
+        <h1>Tech Insights & Tutorials</h1>
+        <p>Discover the latest trends, tips, and tutorials in web development and design</p>
+      </div>
+    </section>
+
+    <!-- Blog Content -->
+    <div class="container blog-container">
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Featured Post -->
+          <article class="blog-card" data-aos="fade-up">
+            <div class="blog-card-img">
+              <div class="featured-badge">Featured</div>
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Web Development</span>
+              <h2><a href="#" class="blog-title">Mastering Modern JavaScript: ES6+ Features Every Developer Should Know</a></h2>
+              <div class="blog-meta">
+                <i class="bi bi-calendar"></i>
+                <span>July 18, 2025</span>
+                <i class="bi bi-person ms-3"></i>
+                <span>Alpha Team</span>
+                <i class="bi bi-eye ms-3"></i>
+                <span>2.4k views</span>
+              </div>
+              <p class="blog-excerpt">
+                Dive deep into the powerful features of modern JavaScript that can transform your development workflow. From arrow functions and destructuring to async/await and modules, discover how these ES6+ features can make your code more efficient and readable.
+              </p>
+              <a href="#" class="read-more-btn">
+                Read Full Article
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Regular Posts -->
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-card-img">
+              <i class="bi bi-palette"></i>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Design</span>
+              <h2><a href="#" class="blog-title">UI/UX Design Trends That Will Dominate 2025</a></h2>
+              <div class="blog-meta">
+                <i class="bi bi-calendar"></i>
+                <span>July 15, 2025</span>
+                <i class="bi bi-person ms-3"></i>
+                <span>Design Team</span>
+                <i class="bi bi-eye ms-3"></i>
+                <span>1.8k views</span>
+              </div>
+              <p class="blog-excerpt">
+                Stay ahead of the curve with the latest design trends shaping the digital landscape. Explore glassmorphism, micro-interactions, dark mode implementations, and accessibility-first design principles that modern users expect.
+              </p>
+              <a href="#" class="read-more-btn">
+                Read Full Article
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="blog-card-img">
+              <i class="bi bi-robot"></i>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">AI & Tech</span>
+              <h2><a href="#" class="blog-title">How AI is Revolutionizing Web Development in 2025</a></h2>
+              <div class="blog-meta">
+                <i class="bi bi-calendar"></i>
+                <span>July 12, 2025</span>
+                <i class="bi bi-person ms-3"></i>
+                <span>Tech Team</span>
+                <i class="bi bi-eye ms-3"></i>
+                <span>3.1k views</span>
+              </div>
+              <p class="blog-excerpt">
+                Discover how artificial intelligence is transforming the way we build websites and applications. From automated code generation to intelligent design assistance, explore the tools and techniques that are reshaping our industry.
+              </p>
+              <a href="#" class="read-more-btn">
+                Read Full Article
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="blog-card-img">
+              <i class="bi bi-phone"></i>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Mobile Dev</span>
+              <h2><a href="#" class="blog-title">Building Progressive Web Apps: A Complete Guide</a></h2>
+              <div class="blog-meta">
+                <i class="bi bi-calendar"></i>
+                <span>July 10, 2025</span>
+                <i class="bi bi-person ms-3"></i>
+                <span>Mobile Team</span>
+                <i class="bi bi-eye ms-3"></i>
+                <span>1.5k views</span>
+              </div>
+              <p class="blog-excerpt">
+                Learn how to create app-like experiences on the web with Progressive Web Apps. This comprehensive guide covers service workers, offline functionality, push notifications, and best practices for PWA development.
+              </p>
+              <a href="#" class="read-more-btn">
+                Read Full Article
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <!-- Recent Posts -->
+          <div class="sidebar-card" data-aos="fade-left">
+            <h5>Recent Posts</h5>
+            <div class="recent-posts">
+              <div class="recent-post">
+                <div class="recent-post-icon">
+                  <i class="bi bi-code"></i>
+                </div>
+                <div class="recent-post-content">
+                  <h6>CSS Grid vs Flexbox: When to Use Which</h6>
+                  <small>July 8, 2025</small>
+                </div>
+              </div>
+              <div class="recent-post">
+                <div class="recent-post-icon">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <div class="recent-post-content">
+                  <h6>Web Security Best Practices for 2025</h6>
+                  <small>July 5, 2025</small>
+                </div>
+              </div>
+              <div class="recent-post">
+                <div class="recent-post-icon">
+                  <i class="bi bi-speedometer2"></i>
+                </div>
+                <div class="recent-post-content">
+                  <h6>Performance Optimization Techniques</h6>
+                  <small>July 2, 2025</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Popular Tags -->
+          <div class="sidebar-card" data-aos="fade-left" data-aos-delay="100">
+            <h5>Popular Tags</h5>
+            <div class="tags">
+              <a href="#" class="tag">JavaScript</a>
+              <a href="#" class="tag">React</a>
+              <a href="#" class="tag">CSS</a>
+              <a href="#" class="tag">Node.js</a>
+              <a href="#" class="tag">UI/UX</a>
+              <a href="#" class="tag">Mobile</a>
+              <a href="#" class="tag">AI</a>
+              <a href="#" class="tag">Performance</a>
+              <a href="#" class="tag">Security</a>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="sidebar-card" data-aos="fade-left" data-aos-delay="200">
+            <h5>Stay Updated</h5>
+            <p>Subscribe to get the latest tutorials and tech insights delivered to your inbox.</p>
+            <form class="newsletter-form">
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Your email address" style="border-radius: 10px; padding: 0.8rem;">
+              </div>
+              <button type="submit" class="btn w-100" style="background: var(--gradient-primary); color: white; border-radius: 10px; padding: 0.8rem; border: none; font-weight: 600;">
+                Subscribe Now
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" style="margin-top: 4rem;">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>ALPHA TECH</h3>
+            <p>
+              <strong>Phone:</strong> +234 7042057479<br>
+              <strong>Email:</strong> ebukaofonegbu@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">Graphics Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">More</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="CV/index.html">Curriculum vitae</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Stay In the Loop with ALPHA TECH Newsletter!</h4>
+            <p>Subscribe to our newsletter for a regular dose of tech insights, industry trends, and skill-building tips. Join the digital community and elevate your knowledge journey today!</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>DAMIEN.Co</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Add smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Newsletter form handling
+    document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      if (email) {
+        alert('Thank you for subscribing! You will receive our latest updates.');
+        this.querySelector('input[type="email"]').value = '';
+      }
+    });
+
+    // Add loading animation to read more buttons
+    document.querySelectorAll('.read-more-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const originalText = this.innerHTML;
+        this.innerHTML = '<i class="bi bi-arrow-clockwise"></i> Loading...';
+        this.style.pointerEvents = 'none';
+        
+        setTimeout(() => {
+          this.innerHTML = originalText;
+          this.style.pointerEvents = 'auto';
+          alert('This would take you to the full article!');
+        }, 1500);
+      });
+    });
+  </script>
+</body>
+
+</html>
